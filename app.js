@@ -257,51 +257,6 @@ function setupScrollDetails() {
   update();
 }
 
-function setupCursor() {
-  if (!window.matchMedia("(pointer: fine)").matches) return;
-
-  const dot = document.querySelector(".cursor-dot");
-  const ring = document.querySelector(".cursor-ring");
-  if (!dot || !ring) return;
-
-  let mouseX = 0;
-  let mouseY = 0;
-  let ringX = 0;
-  let ringY = 0;
-
-  window.addEventListener("mousemove", (event) => {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-    dot.style.left = `${mouseX}px`;
-    dot.style.top = `${mouseY}px`;
-    document.body.classList.add("cursor-visible");
-  });
-
-  const follow = () => {
-    ringX += (mouseX - ringX) * 0.14;
-    ringY += (mouseY - ringY) * 0.14;
-    ring.style.left = `${ringX}px`;
-    ring.style.top = `${ringY}px`;
-    requestAnimationFrame(follow);
-  };
-  follow();
-
-  document.addEventListener("mouseover", (event) => {
-    document.body.classList.toggle(
-      "cursor-hover",
-      Boolean(
-        event.target.closest(
-          "a, button, .service-card, .principle, .article-card, .preview-card, .credential-card",
-        ),
-      ),
-    );
-  });
-
-  document.documentElement.addEventListener("mouseleave", () => {
-    document.body.classList.remove("cursor-visible");
-  });
-}
-
 function setupCardStagger() {
   document
     .querySelectorAll(".service-grid, .article-grid, .credential-grid, .preview-grid")
@@ -319,7 +274,6 @@ renderCredentials(content.credentials);
 setupCredentialLightbox(content.credentials);
 setupMenu();
 setupScrollDetails();
-setupCursor();
 setupCardStagger();
 setupReveals();
 
