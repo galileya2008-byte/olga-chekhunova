@@ -917,32 +917,6 @@ h1 span:last-child {
   transition-delay: 0.18s;
 }
 
-@media (pointer: fine) {
-  :root {
-    --cursor-pen: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M21.8 2.6c.8-.8 2.1-.8 2.9 0l.7.7c.8.8.8 2.1 0 2.9L10.2 21.4l-4.1 1.2 1.2-4.1L21.8 2.6z' fill='%2324241d'/%3E%3Cpath d='M20.2 4.2l3.6 3.6' stroke='%23f5f5e9' stroke-width='1.2'/%3E%3C/svg%3E") 2 26;
-  }
-
-  body,
-  body * {
-    cursor: var(--cursor-pen), auto !important;
-  }
-
-  a,
-  button,
-  [role="button"],
-  .service-card,
-  .preview-card,
-  .credential-card,
-  .article-card,
-  .principle,
-  input,
-  textarea,
-  select,
-  label[for] {
-    cursor: var(--cursor-pen), pointer !important;
-  }
-}
-
 @media (max-width: 1200px) {
   .hero {
     grid-template-columns: minmax(440px, 1fr) minmax(360px, 0.8fr);

@@ -1,0 +1,14 @@
+---
+description: Always commit and push site changes to GitHub after edits
+alwaysApply: true
+---
+
+# Always push to GitHub
+
+After completing substantive code or content changes in this project:
+
+1. Commit the relevant files with a concise message.
+2. Push to `origin` (`main`) without waiting for a separate request.
+3. Report the result briefly (commit done / pushed).
+
+Do not skip push unless the user explicitly says not to push, or GitHub auth/network blocks it (then say so).
