@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Управление сайтом — Ольга Чехунова</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="admin-brand" href="index.html">
+      <span>ОЧ</span>
+      <div>
+        <strong>Ольга Чехунова</strong>
+        <small>Управление сайтом</small>
+      </div>
+    </a>
+    <nav>
+      <button class="nav-item active" type="button" data-section="services">
+        <span>01</span> Услуги
+      </button>
+      <button class="nav-item" type="button" data-section="credentials">
+        <span>02</span> Документы
+      </button>
+      <button class="nav-item" type="button" data-section="articles">
+        <span>03</span> Статьи
+      </button>
+    </nav>
+    <div class="sidebar-bottom">
+      <p>Демо-версия</p>
+      <small>Данные сохраняются в текущем браузере. Документы можно загрузить с компьютера.</small>
+      <a href="index.html" target="_blank">Открыть сайт ↗</a>
+      <a href="services.html" target="_blank">Страница услуг ↗</a>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">Панель управления</p>
+        <h1 id="page-title">Услуги</h1>
+      </div>
+      <button class="primary-button" id="add-button" type="button">＋ Добавить услугу</button>
+    </header>
+
+    <section class="notice">
+      <span>i</span>
+      <p><strong>Локальная демо-панель.</strong> Услуги, статьи и документы (дипломы, сертификаты) сохраняются в браузере. Для публикации сайта подключите базу данных и авторизацию.</p>
+    </section>
+
+    <section class="content-list" id="content-list" aria-live="polite"></section>
+  </main>
+
+  <dialog class="editor-dialog" id="editor-dialog">
+    <form method="dialog" id="editor-form">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">Редактор</p>
+          <h2 id="dialog-title">Новая услуга</h2>
+        </div>
+        <button class="close-button" type="button" id="close-dialog" aria-label="Закрыть">×</button>
+      </div>
+      <div id="form-fields"></div>
+      <div class="dialog-actions">
+        <button class="secondary-button" type="button" id="cancel-dialog">Отмена</button>
+        <button class="primary-button" type="submit">Сохранить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status">Изменения сохранены</div>
+  <script src="admin.js"></script>
+</body>
+</html>

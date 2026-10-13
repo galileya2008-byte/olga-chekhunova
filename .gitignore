@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+node_modules/
+.vscode/
+.idea/
+*.local
+credentials/*.jpg
+credentials/*.jpeg
+credentials/*.png
+credentials/*.webp
+credentials/*.pdf
+!credentials/README.txt
